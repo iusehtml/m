@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <button id="button">Hi there.</button>
+    </body>
+    <script>
+        var button = document.querySelector('#button');
+        button.addEventListener("click", () => {
+            window.history.pushState({ id: 234 }, '', 'buy.html');
+        });
+    </script>
+</html>

@@ -1,0 +1,369 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width">
+        <meta name="theme-color" content="rgb(48, 166, 202)">
+        <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500&display=swap" rel="stylesheet"> -->
+    </head>
+<body>
+    <div style="position: fixed;height: 50px;background: rgb(48, 166, 202);width: 100%;margin: 0;left: 0;display: flex;top: 0;z-index: 9;justify-content: center;align-items: center;gap: 30px;user-select: none;font-weight: bold;">
+        <a href="index.html" target="_top" tabindex="1"><span class="span">Home</span></a>
+        <a tabindex="2"><div class="span1">Blog</div></a>
+        <!-- <a>Contact</a> -->
+    </div>
+    <div style="position: relative;overflow-wrap: break-word;margin-top: 90px;display: flex;justify-content: center;" class="container">
+        <div class="div" style="overflow-x: hidden;flex-direction: column;" onclick="myfunction()" tabindex="3">
+            <img src="https://dl.airtable.com/.attachments/e046ace2e5aaaa624d9f03446fe2de44/81fa9d31/MacOSBigSurWallpaper.jpg" style="width: 100%;height: 200px;object-fit: cover;">
+            <span style="width: max-content;height: max-content;align-self: flex-start;margin-left: 10px;font-weight: 700;color: white;margin-top: 10px;width: 95%;" class="font-size">The New Math</span>
+            <span style="width: max-content;height: max-content;align-self: flex-start;margin-left: 10px;font-weight: 700;color: white;" class="font-size-small">The new math!</span>
+        </div>
+        <div class="div" tabindex="4">
+            Green 
+        </div>
+        <div class="div" tabindex="5">
+            Green 
+        </div>
+    </div>
+</body>
+
+
+
+
+
+
+<style>
+
+* {
+    font-family: Red Hat Di;
+    font-feature-settings: 'ss01';
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: Red Hat Di;
+    src: url('https://dl.airtable.com/.attachments/d965acca183a70591a846b38dc714e02/255dac19/RedHatDisplay-SemiBold.ttf');
+}
+
+
+
+.span1::before {
+    content: '';
+    height: 1.5px;
+    width: 100%;
+    position: absolute;
+    bottom: -1;
+    left: 0;
+    background: white;
+    transform: scaleX(1);
+    transform-origin: right;
+}
+a:hover .span1::before {
+    content: '';
+    height: 1.5px;
+    width: 100%;
+    position: absolute;
+    bottom: -1;
+    left: 0;
+    background: white;
+    animation: underline1 0.4s linear infinite;
+    animation-delay: 0.2s;
+}
+@keyframes underline1 {
+    0% {
+        transform: scaleX(1);
+    }
+    50% {
+        transform: scaleX(0);
+        transform-origin: right;
+    }
+    51% {
+        transform-origin: left;
+    }
+    100% {
+        transform-origin: left;
+        transform: scaleX(1);
+    }
+}
+.span1 {
+    position: relative;
+}
+
+.span::before {
+content: '';
+height: 1.5px;
+width: 100%;
+position: absolute;
+bottom: -1;
+left: 0;
+background: white;
+transform: scaleX(0);
+transform-origin: left;
+}
+a:hover .span::before {
+    content: '';
+    height: 1.5px;
+    width: 100%;
+    position: absolute;
+    bottom: -1;
+    left: 0;
+background: white;
+animation: underline 0.4s linear infinite;
+animation-delay: 0.2s;
+}
+@keyframes underline {
+0% {
+    transform: scaleX(0);
+}
+50% {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+51% {
+    transform-origin: right;
+}
+100% {
+    transform-origin: right;
+    transform: scaleX(0);
+}
+}
+.span {
+position: relative;
+}
+
+
+img {
+pointer-events: none;
+}
+.font-size {
+font-size: 34px;
+}
+.font-size-small {
+font-size: 16px;
+}
+.div {
+cursor: pointer;
+}
+
+
+
+
+
+
+@media (max-width: 980px) {
+    .div {
+        background: linear-gradient(149.24deg, #ff3a99 20.46%, #FCFF5E 105.74%);
+    height: 500px;
+    width: 47%;
+    min-width: 300px;
+    border-radius: 0px;
+    clip-path: polygon(44px 0%, 100% 0%, 100% calc(100% - 44px), calc(100% - 44px) 100%, 0% 100%, 0% 44px);
+    box-shadow: rgb(0, 0, 0, 0.3) 3px 3px 20px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    transition: 0.12s ease-out;
+    border: none;
+    }
+    .div:hover {
+    transform: scale(1.03);
+    }
+    .container {
+        gap: 35px;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    a {
+    color: rgb(255, 255, 255, 0.7);
+    background: none;
+    padding: 7px 20px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    }
+    a:hover {
+    background: rgb(255, 255, 255, 0.3);
+    color: white;
+    }
+    a:nth-child(2) {
+    color: white;
+    }
+    body {
+    background-color: rgb(241, 241, 241);
+    color: black;
+    }
+    ::-webkit-scrollbar {
+    background-color: none;
+    width: 6px;
+    }
+    ::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 60px;
+    }
+    }
+
+    ::-webkit-scrollbar {
+    background-color: none;
+    width: 6px;
+    height: 6px;
+    }
+    ::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 60px;
+    }
+
+
+
+
+
+
+
+
+    @media (max-width: 655px) {
+        .div {
+            background: linear-gradient(149.24deg, #FF3A99 20.46%, #FCFF5E 105.74%);
+            height: 500px;
+            width: 80%;
+            border-radius: 0px;
+            clip-path: polygon(44px 0%, 100% 0%, 100% calc(100% - 44px), calc(100% - 44px) 100%, 0% 100%, 0% 44px);
+            box-shadow: rgb(0, 0, 0, 0.3) 0px 0px 20px 0px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            transition: 0.12s ease-out;
+            border: none;
+        }
+        .div:hover {
+            transform: scale(1.03);
+        }
+        .container {
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+        }
+        a {
+            color: rgb(255, 255, 255, 0.7);
+            background: none;
+            padding: 7px 20px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            text-decoration: none;
+        }
+        a:hover {
+            background: rgb(255, 255, 255, 0.3);
+            color: white;
+        }
+        a:nth-child(2) {
+            color: white;
+        }
+        body {
+            background-color: rgb(241, 241, 241);
+            color: black;
+        }
+        ::-webkit-scrollbar {
+            background-color: none;
+            width: 6px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: black;
+            border-radius: 60px;
+        }
+    }
+    
+    
+
+
+
+
+
+
+
+    @media (min-width: 980px) { 
+    .div {
+        background: linear-gradient(149.24deg, #ff3a6b 20.46%, #FCFF5E 150.74%);
+        /* background: #E5202B; */
+    height: 500px;
+    width: 32%;
+    border-radius: 0px;
+    clip-path: polygon(44px 0%, 100% 0%, 100% calc(100% - 44px), calc(100% - 44px) 100%, 0% 100%, 0% 44px);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    transition: 0.12s ease-out;
+    gap: 0px;
+    font-size: 34px;
+    border: none;
+    }
+    .div:hover{
+    transform: scale(1.03);
+    }
+    .container {
+        gap: 20px;
+    }
+    a {
+    color: rgb(255, 255, 255, 0.7);
+    background: none;
+    padding: 7px 20px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    }
+    a:hover {
+    background: rgb(255, 255, 255, 0.3);
+    color: white;
+    }
+    a:nth-child(2) {
+    color: white;
+    }
+    body {
+    background-color: rgb(241, 241, 241);
+    color: black;
+    }
+    ::-webkit-scrollbar {
+    background-color: none;
+    width: 6px;
+    }
+    ::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 60px;
+    }
+    }
+    
+    
+    
+</style>
+<!--
+    Dark Blue
+    Hex: #7B68EE
+    Rgb: 123, 104, 238
+
+    Light Blue
+    Hex: #49CCF9
+    Rgb: 73, 204, 249
+
+    Pink
+    Hex: #FD71AF
+    Rgb: 253, 113, 175
+
+    Yellow
+    Hex: #FFC800
+    Rgb: 255, 200, 0
+-->
+<script>
+function myfunction() {
+window.location.href = "index.html";
+}
+</script>
+</html>
